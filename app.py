@@ -18,7 +18,7 @@ from pymongo import MongoClient
 from pyzbar.pyzbar import decode
 from waitress import serve
 from wtforms import StringField
-mode='local'
+mode='cloud'
 
 if mode=='local':
     app = Flask(__name__)
@@ -31,11 +31,11 @@ if mode=='local':
 else:
     app = Flask(__name__)
     app.secret_key = 'your_secret_key_here'
-    app.config['MONGO_URI'] = 'mongodb://localhost:27017/myapp'
+    app.config['MONGO_URI'] = 'mongodb://localhost:27017/chatbot'
     mongo = PyMongo(app)
     # Connect to MongoDB
     client = MongoClient("mongodb+srv://shiban:hqwaSJns8vkQVVtk@cluster0.6dhrc7h.mongodb.net/test") 
-    db = client['myapp']
+    db = client['chatbot']
 
 
 
