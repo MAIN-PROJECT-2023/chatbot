@@ -1,0 +1,47 @@
+{
+    "intents": [
+        {
+            "tag": "fallback_response",
+            "patterns": [],
+            "responses": ["I'm sorry, I didn't quite catch that. Can you please provide more details or ask another question?"]
+        },
+      {
+        "tag": "greeting",
+        "patterns": ["Hi", "Hello", "Hey"],
+        "responses": ["Hello! How can I assist you today?", "Hi there! What can I do for you?"]
+      },
+      {
+        "tag": "ask_question",
+        "patterns": ["Ask me a question", "Pose a question", "Ask away"],
+        "responses": ["Sure thing! What's your favorite hobby?", "Great! What programming language do you prefer?", "Awesome! Tell me, what's your favorite movie genre?"]
+      },
+      {
+        "tag": "hobby_response",
+        "patterns": ["My favorite hobby is {hobby}", "I like {hobby}", "I enjoy {hobby}"],
+        "responses": ["That's cool! What got you interested in {hobby}?", "Nice choice! How long have you been into {hobby}?"]
+      },
+      {
+        "tag": "programming_language_response",
+        "patterns": ["I prefer {language}", "My favorite programming language is {language}", "{language}"],
+        "responses": ["Interesting choice! What projects do you usually work on with {language}?", "Nice! Do you have a favorite feature of {language}?"]
+      },
+      {
+        "tag": "movie_genre_response",
+        "patterns": ["I like {genre} movies", "My favorite movie genre is {genre}", "{genre}"],
+        "responses": ["Great! What's the last {genre} movie you watched and enjoyed?", "Nice choice! Do you have a favorite {genre} movie?"]
+      },
+      {
+        "tag": "thanks",
+        "patterns": ["Thanks", "Thank you", "Thanks a lot"],
+        "responses": ["You're welcome! Is there anything else you'd like to share or discuss?", "No problem! How else can I assist you?"]
+      },
+      {
+        "tag": "goodbye",
+        "patterns": ["Goodbye", "See you later", "Bye"],
+        "responses": ["Goodbye! If you ever want to chat again, feel free to reach out.", "See you later! Take care."]
+      }
+   
+      
+    ]
+  }
+  
