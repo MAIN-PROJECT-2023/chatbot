@@ -60,7 +60,11 @@
   </header>
 
   <main id="main">
+
     <section id="chat" class="chat">
+      <div class="userdisplay">
+        <h1>Hello, {{ username }}!</h1>
+    </div>
         <div id="chat-container">
             <div id="chat-box"></div>
         </div>
@@ -72,252 +76,257 @@
     
     </section>
   
-      <!-- ======= About Section ======= -->
-      <section id="about" class="about">
-        <div class="container">
-  
-          <div class="row justify-content-between">
-            <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
+       <!-- ======= About Section ======= -->
+<section id="about" class="about">
+  <div class="container">
+
+      <div class="row justify-content-between">
+          <div class="col-lg-5 d-flex align-items-center justify-content-center about-img">
               <img src="{{ url_for('static', filename='img/about-img.svg') }}" class="img-fluid" alt="" data-aos="zoom-in">
-            </div>
-            <div class="col-lg-6 pt-5 pt-lg-0">
-              <h3 data-aos="fade-up">Voluptatem dignissimos provident quasi</h3>
+          </div>
+          <div class="col-lg-6 pt-5 pt-lg-0">
+              <h3 data-aos="fade-up">Your Academic Success Companion</h3>
               <p data-aos="fade-up" data-aos-delay="100">
-                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Duis aute irure dolor in reprehenderit
+                  Welcome to our Academic Advisor Chatbot! We are dedicated to providing you with personalized
+                  support and guidance throughout your academic journey. 
               </p>
               <div class="row">
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
-                  <i class="bx bx-receipt"></i>
-                  <h4>Corporis voluptates sit</h4>
-                  <p>Consequuntur sunt aut quasi enim aliquam quae harum pariatur laboris nisi ut aliquip</p>
-                </div>
-                <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
-                  <i class="bx bx-cube-alt"></i>
-                  <h4>Ullamco laboris nisi</h4>
-                  <p>Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt</p>
-                </div>
+                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="100">
+                      <i class="bx bx-receipt"></i>
+                      <h4>Personalized Recommendations</h4>
+                      <p>Get tailored advice on course selections, program requirements, and academic planning.</p>
+                  </div>
+                  <div class="col-md-6" data-aos="fade-up" data-aos-delay="200">
+                      <i class="bx bx-cube-alt"></i>
+                      <h4>Expert Guidance</h4>
+                      <p>Our chatbot provides expert assistance to help you navigate through academic challenges.</p>
+                  </div>
               </div>
-            </div>
           </div>
-  
-        </div>
-      </section><!-- End About Section -->
-  
-      <!-- ======= Services Section ======= -->
-      <section id="services" class="services section-bg">
-        <div class="container" data-aos="fade-up">
+      </div>
+
+  </div>
+</section>
+<!-- End About Section -->
+
+    <!-- ======= Services Section ======= -->
+    <section id="services" class="services section-bg">
+      <div class="container" data-aos="fade-up">
   
           <div class="section-title">
-            <h2>Services</h2>
-            <p>Check out the great services we offer</p>
+              <h2>Chatbot Services</h2>
+              <p>Explore the services offered by our Academic Advisor Chatbot</p>
           </div>
   
           <div class="row">
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bxl-dribbble"></i></div>
-                <h4 class="title"><a href="">Lorem Ipsum</a></h4>
-                <p class="description">Voluptatum deleniti atque corrupti quos dolores et quas molestias excepturi sint occaecati cupiditate</p>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="100">
+                  <div class="icon-box">
+                      <div class="icon"><i class="bx bx-chat"></i></div>
+                      <h4 class="title"><a href="">Personalized Guidance</a></h4>
+                      <p class="description">Receive personalized guidance from our chatbot to help you navigate academic challenges and make informed decisions about your education.</p>
+                  </div>
               </div>
-            </div>
   
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-file"></i></div>
-                <h4 class="title"><a href="">Sed ut perspiciatis</a></h4>
-                <p class="description">Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla</p>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="200">
+                  <div class="icon-box">
+                      <div class="icon"><i class="bx bx-search"></i></div>
+                      <h4 class="title"><a href="">Course Recommendations</a></h4>
+                      <p class="description">Discover the best courses for your program and interests. Our chatbot provides tailored recommendations to help you build a well-rounded academic schedule.</p>
+                  </div>
               </div>
-            </div>
   
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-tachometer"></i></div>
-                <h4 class="title"><a href="">Magni Dolores</a></h4>
-                <p class="description">Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim</p>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="300">
+                  <div class="icon-box">
+                      <div class="icon"><i class="bx bx-calendar"></i></div>
+                      <h4 class="title"><a href="">Academic Deadlines</a></h4>
+                      <p class="description">Stay on top of important academic deadlines. Our chatbot will remind you about registration dates, exam schedules, and other key milestones in your academic journey.</p>
+                  </div>
               </div>
-            </div>
   
-            <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
-              <div class="icon-box">
-                <div class="icon"><i class="bx bx-world"></i></div>
-                <h4 class="title"><a href="">Nemo Enim</a></h4>
-                <p class="description">At vero eos et accusamus et iusto odio dignissimos ducimus qui blanditiis praesentium voluptatum</p>
+              <div class="col-md-6 col-lg-3 d-flex align-items-stretch" data-aos="zoom-in" data-aos-delay="400">
+                  <div class="icon-box">
+                      <div class="icon"><i class="bx bx-help-circle"></i></div>
+                      <h4 class="title"><a href="">Academic Support</a></h4>
+                      <p class="description">Need help with a challenging assignment or academic concept? Our chatbot is here to provide additional resources, explanations, and support to enhance your learning experience.</p>
+                  </div>
               </div>
-            </div>
   
           </div>
   
-        </div>
-      </section><!-- End Services Section -->
-  
-      
-  
-      <!-- ======= Team Section ======= -->
-      <section id="team" class="team">
-        <div class="container">
-  
-          <div class="section-title" data-aos="fade-up">
-            <h2>Team</h2>
-            <p>Our team is always here to help</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
-              <div class="member">
+      </div>
+  </section>
+  <!-- End Services Section -->
+
     
-                <img src="{{ url_for('static', filename='img/team/team-1.jpg') }}" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Walter White</h4>
-                    <span>Chief Executive Officer</span>
-                  </div>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
-              <div class="member">
-                
-                <img src="{{ url_for('static', filename='img/team/team-2.jpg') }}" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Sarah Jhonson</h4>
-                    <span>Product Manager</span>
-                  </div>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
-              <div class="member">
-               
-                <img src="{{ url_for('static', filename='img/team/team-3.jpg') }}" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>William Anderson</h4>
-                    <span>CTO</span>
-                  </div>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-            <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
-              <div class="member">
-                
-                <img src="{{ url_for('static', filename='img/team/team-4.jpg') }}" class="img-fluid" alt="">
-                <div class="member-info">
-                  <div class="member-info-content">
-                    <h4>Amanda Jepson</h4>
-                    <span>Accountant</span>
-                  </div>
-                  <div class="social">
-                    <a href=""><i class="bi bi-twitter"></i></a>
-                    <a href=""><i class="bi bi-facebook"></i></a>
-                    <a href=""><i class="bi bi-instagram"></i></a>
-                    <a href=""><i class="bi bi-linkedin"></i></a>
-                  </div>
-                </div>
-              </div>
-            </div>
-  
-          </div>
-  
+
+    <!-- ======= Team Section ======= -->
+    <section id="team" class="team">
+      <div class="container">
+
+        <div class="section-title" data-aos="fade-up">
+          <h2>Team</h2>
+          <p>Our team is always here to help</p>
         </div>
-      </section><!-- End Team Section -->
+
+        <div class="row">
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="100">
+            <div class="member">
   
+              <img src="{{ url_for('static', filename='img/team/team-1.jpg') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Ahina Merin Reji</h4>
+                  <span>Chief Executive Officer</span>
+                </div>
+                <div class="social">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/" ><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" ><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="200">
+            <div class="member">
+              
+              <img src="{{ url_for('static', filename='img/team/team-2.jpg') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Shiban M</h4>
+                  <span>Product Manager</span>
+                </div>
+                <div class="social">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/" ><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" ><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="300">
+            <div class="member">
+             
+              <img src="{{ url_for('static', filename='img/team/team-3.jpg') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Sourab Berlin</h4>
+                  <span>CTO</span>
+                </div>
+                <div class="social">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/" ><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" ><i class="bi bi-linkedin"></i></a>
+                </div>
+              </div>
+            </div>
+          </div>
+
+          <div class="col-xl-3 col-lg-4 col-md-6" data-aos="zoom-in" data-aos-delay="400">
+            <div class="member">
+              
+              <img src="{{ url_for('static', filename='img/team/team-4.jpg') }}" class="img-fluid" alt="">
+              <div class="member-info">
+                <div class="member-info-content">
+                  <h4>Riswin Noushad</h4>
+                  <span>Accountant</span>
+                </div>
+                <div class="social">
+                  <a href="https://twitter.com/"><i class="bi bi-twitter"></i></a>
+                  <a href="https://www.facebook.com/"><i class="bi bi-facebook"></i></a>
+                  <a href="https://www.instagram.com/" ><i class="bi bi-instagram"></i></a>
+                  <a href="https://www.linkedin.com/" ><i class="bi bi-linkedin"></i></a>
+                 </div>
+              </div>
+            </div>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Team Section -->
+
+ 
+
+    <!-- ======= Contact Us Section ======= -->
+    <section id="contact" class="contact">
    
-  
-      <!-- ======= Contact Us Section ======= -->
-      <section id="contact" class="contact">
-        <div class="container" data-aos="fade-up">
-  
-          <div class="section-title">
-            <h2>Contact Us</h2>
-            <p>Contact us the get started</p>
-          </div>
-  
-          <div class="row">
-  
-            <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
-              <div class="info">
-                <div class="address">
-                  <i class="bi bi-geo-alt"></i>
-                  <h4>Location:</h4>
-                  <p>A108 Adam Street, New York, NY 535022</p>
-                </div>
-  
-                <div class="email">
-                  <i class="bi bi-envelope"></i>
-                  <h4>Email:</h4>
-                  <p>info@example.com</p>
-                </div>
-  
-                <div class="phone">
-                  <i class="bi bi-phone"></i>
-                  <h4>Call:</h4>
-                  <p>+1 5589 55488 55s</p>
-                </div>
-  
-                <iframe src="https://www.google.com/maps/embed?pb=!1m14!1m8!1m3!1d12097.433213460943!2d-74.0062269!3d40.7101282!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x0%3A0xb89d1fe6bc499443!2sDowntown+Conference+Center!5e0!3m2!1smk!2sbg!4v1539943755621" frameborder="0" style="border:0; width: 100%; height: 290px;" allowfullscreen></iframe>
-              </div>
-  
-            </div>
-  
-            <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
-              <form action="" method="post" role="form" class="php-email-form">
-                <div class="row">
-                  <div class="form-group col-md-6">
-                    <label for="name">Your Name</label>
-                    <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
-                  </div>
-                  <div class="form-group col-md-6 mt-3 mt-md-0">
-                    <label for="name">Your Email</label>
-                    <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
-                  </div>
-                </div>
-                <div class="form-group mt-3">
-                  <label for="name">Subject</label>
-                  <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
-                </div>
-                <div class="form-group mt-3">
-                  <label for="name">Message</label>
-                  <textarea class="form-control" name="message" rows="10" required></textarea>
-                </div>
-                <div class="my-3">
-                  <div class="loading">Loading</div>
-                  <div class="error-message"></div>
-                  <div class="sent-message">Your message has been sent. Thank you!</div>
-                </div>
-                <div class="text-center"><button type="submit">Send Message</button></div>
-              </form>
-            </div>
-  
-          </div>
-  
+      <div class="container" data-aos="fade-up">
+
+        <div class="section-title">
+          <h2>Contact Us</h2>
+          <p>Contact us the get started</p>
         </div>
-      </section>
 
-  </main>
+        <div class="row">
 
+          <div class="col-lg-5 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="100">
+            <div class="info">
+              <div class="address">
+                <i class="bi bi-geo-alt"></i>
+                <h4>Location:</h4>
+                <p>Ernakulam, Kochi, kerala</p>
+              </div>
+
+              <div class="email">
+                <i class="bi bi-envelope"></i>
+                <h4>Email:</h4>
+                <p> accdemicavisor1834@gmail.com</p>
+              </div>
+
+              <div class="phone">
+                <i class="bi bi-phone"></i>
+                <h4>Call:</h4>
+                <p>+91 9640 680 680</p>
+              </div>
+
+              <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3932.2660143469357!2d76.36178251472487!3d9.743519793027268!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x3b0879620b16c7e1%3A0x8858edaeedfc5220!2sCollege%20of%20Engineering%20Cherthala!5e0!3m2!1sen!2sin!4v1669199449710!5m2!1sen!2sin" frameborder="0" style="border:0; width: 100%; height: 290px;" ></iframe>
+            </div>
+
+          </div>
+
+          <div class="col-lg-7 mt-5 mt-lg-0 d-flex align-items-stretch" data-aos="fade-up" data-aos-delay="200">
+            <form action="" method="post" role="form" class="php-email-form">
+              <div class="row">
+                <div class="form-group col-md-6">
+                  <label for="name">Your Name</label>
+                  <input type="text" name="name" class="form-control" id="name" placeholder="Your Name" required>
+                </div>
+                <div class="form-group col-md-6 mt-3 mt-md-0">
+                  <label for="name">Your Email</label>
+                  <input type="email" class="form-control" name="email" id="email" placeholder="Your Email" required>
+                </div>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Subject</label>
+                <input type="text" class="form-control" name="subject" id="subject" placeholder="Subject" required>
+              </div>
+              <div class="form-group mt-3">
+                <label for="name">Message</label>
+                <textarea class="form-control" name="message" rows="10" required></textarea>
+              </div>
+              <div class="my-3">
+                <div class="loading">Loading</div>
+                <div class="error-message"></div>
+                <div class="sent-message">Your message has been sent. Thank you!</div>
+              </div>
+              <div class="text-center"><button type="submit">Send Message</button></div>
+            </form>
+          </div>
+
+        </div>
+
+      </div>
+    </section><!-- End Contact Us Section -->
+
+  </main><!-- End #main -->
+
+  <!-- ======= Footer ======= -->
   <footer id="footer">
 
 
@@ -326,47 +335,48 @@
         <div class="row">
 
           <div class="col-lg-3 col-md-6 footer-contact">
-            <h3>Ninestars</h3>
+            <h3>Accademic Advisor</h3>
             <p>
-              A108 Adam Street <br>
-              New York, NY 535022<br>
-              United States <br><br>
-              <strong>Phone:</strong> +1 5589 55488 55<br>
-              <strong>Email:</strong> info@example.com<br>
+              Ernakulam <br>
+              kochi, Kerala<br>
+              India <br><br>
+              <strong>Phone:</strong> +91 9640 680 680<br>
+              <strong>Email:</strong> accdemicavisor1834@gmail.com<br>
             </p>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Useful Links</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Home</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">About us</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Services</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Terms of service</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Privacy policy</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="/chatbot">Home</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#about">About us</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Services</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#team">Team</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#contact">Contact</a></li>
+
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Services</h4>
             <ul>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Design</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Web Development</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Product Management</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Marketing</a></li>
-              <li><i class="bx bx-chevron-right"></i> <a href="#">Graphic Design</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Personalized Guidance</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Course Recommendations</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Accademic Deadlines</a></li>
+              <li><i class="bx bx-chevron-right"></i> <a href="#services">Accademic Support</a></li>
+              
             </ul>
           </div>
 
           <div class="col-lg-3 col-md-6 footer-links">
             <h4>Our Social Networks</h4>
-            <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p>
+          <!--   <p>Cras fermentum odio eu feugiat lide par naso tierra videa magna derita valies</p> -->
             <div class="social-links mt-3">
-              <a href="#" class="twitter"><i class="bx bxl-twitter"></i></a>
-              <a href="#" class="facebook"><i class="bx bxl-facebook"></i></a>
-              <a href="#" class="instagram"><i class="bx bxl-instagram"></i></a>
-              <a href="#" class="google-plus"><i class="bx bxl-skype"></i></a>
-              <a href="#" class="linkedin"><i class="bx bxl-linkedin"></i></a>
+              <a href="https://twitter.com/" class="twitter"><i class="bx bxl-twitter"></i></a>
+              <a href="https://www.facebook.com/" class="facebook"><i class="bx bxl-facebook"></i></a>
+              <a href="https://www.instagram.com/" class="instagram"><i class="bx bxl-instagram"></i></a>
+              <a href="https://www.google.com/" class="google-plus"><i class="bx bxl-skype"></i></a>
+              <a href="https://www.linkedin.com/" class="linkedin"><i class="bx bxl-linkedin"></i></a>
             </div>
           </div>
 
@@ -376,12 +386,12 @@
 
     <div class="container py-4">
       <div class="copyright">
-        &copy; Copyright <strong><span>Ninestars</span></strong>. All Rights Reserved
+        &copy; Copyright <strong><span>Accademic chatbot </span></strong>. All Rights Reserved
       </div>
-      <div class="credits">
+      <!-- <div class="credits">
 
         Designed by <a href="https://bootstrapmade.com/">BootstrapMade</a>
-      </div>
+      </div> -->
     </div>
   </footer><!-- End Footer -->
 

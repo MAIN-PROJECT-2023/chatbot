@@ -425,7 +425,17 @@ section {
   bottom: 0;
   left: calc(50% - 30px);
 }
+.userdisplay {
+  background-color: #f4f4f4;
+  border: 1px solid #ddd;
+  padding: 20px;
+  text-align: center;
+}
 
+.userdisplay h1 {
+  font-size: 24px;
+  color: #333;
+}
 /*--------------------------------------------------------------
 # Breadcrumbs
 --------------------------------------------------------------*/
@@ -1110,15 +1120,27 @@ section {
   margin-bottom: 10px;
 }
 
+/* User message style */
 .user-message {
   text-align: right;
   color: #032710;
+  background-color: #DCF8C6; /* Light green background */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
 }
 
+/* Bot message style */
 .bot-message {
   text-align: left;
   color: #041a20;
+  background-color: #E0E0E0; /* Light gray background */
+  border-radius: 10px;
+  padding: 10px;
+  margin: 5px 0;
 }
+
+
 
 #chat-container, #chat-input {
   max-width: 600px;

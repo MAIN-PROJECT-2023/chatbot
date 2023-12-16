@@ -119,8 +119,12 @@ def homeregister():
             return redirect(url_for('loginregpage'))
 
         db.chatbotuser.insert_one({'name': name, 'email': email, 'password': password})
+
+        # Store user information in session after registration
+        session['user'] = {'name': name, 'email': email}
+        
         flash('Registration successful', 'success')
-        return redirect(url_for('chatbotpage'))
+        return redirect(url_for('chatbotpage', username=name))
 
     return render_template('login.html')
 
@@ -137,9 +141,10 @@ def logincred():
         user = db.chatbotuser.find_one({'email': email, 'password': password})
 
         if user:
-          # Store user ID in session
+            # Store user ID in session
+            session['user'] = {'name': user['name'], 'email': email}
             flash('Login successful', 'success')
-            return redirect(url_for('chatbotpage'))
+            return redirect(url_for('chatbotpage', username=user['name']))
         else:
             flash('Invalid email or password', 'error')
             return redirect(url_for('loginregpage'))
@@ -147,7 +152,18 @@ def logincred():
 
 @app.route('/chatbotpage')
 def chatbotpage():
-    return render_template('chatbot.html')
+    # Retrieve user information from session
+    user = session.get('user', None)
+
+    # Check if user is logged in
+    if user:
+        # Pass the username to the template
+        return render_template('chatbot.html', username=user['name'])
+    else:
+        # Redirect to login page if not logged in
+        flash('Please log in first', 'error')
+        return redirect(url_for('loginregpage'))
+
 
 @app.route('/ask', methods=['POST'])
 def ask():
@@ -158,4 +174,4 @@ def ask():
 
 
 if __name__ == '__main__':
-    app.run(debug=True,host='0.0.0.0')
+    app.run(debug=True)
