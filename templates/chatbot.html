@@ -37,14 +37,14 @@
     <div class="container d-flex align-items-center justify-content-between">
 
       <div class="logo">
-        <h1 class="text-light"><a style="color: purple;" href="/chatbotpage"><span>Accademic Advisor</span></a></h1>
+        <h1 class="text-light"><a  href="/chatbotpage"><span>Accademic Advisor</span></a></h1>
         <!-- Uncomment below if you prefer to use an image logo -->
        <!--  <a href="index.html"><img src="assets/img/favicon.png" alt="" class="img-fluid"></a> -->
       </div>
 
       <nav id="navbar" class="navbar">
         <ul>
-          <li><a style="color: purple;" class="nav-link scrollto active" href="/chatbotpage">Chatbot</a></li>
+          <li><a  class="nav-link scrollto active" href="/chatbotpage">Chatbot</a></li>
           <li><a class="nav-link scrollto" href=" #about">About Us</a></li>
           <li><a class="nav-link scrollto" href="#services">Services</a></li>
 
@@ -60,11 +60,11 @@
   </header>
 
   <main id="main">
-
+    <div class="userdisplay">
+      <h1>Hello, {{ username }}!</h1>
+  </div>
     <section id="chat" class="chat">
-      <div class="userdisplay">
-        <h1>Hello, {{ username }}!</h1>
-    </div>
+    
         <div id="chat-container">
             <div id="chat-box"></div>
         </div>
