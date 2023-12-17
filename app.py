@@ -6,19 +6,9 @@ import numpy as np
 import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
-
-""" import firebase_admin
-from firebase_admin import auth, credentials, initialize_app
-import pyrebase """
-""" cred = credentials.Certificate("chatbot-685e7-firebase-adminsdk-wj1vy-4cc376f563.json")
-firebase_admin.initialize_app(cred)
- """
 from flask_pymongo import PyMongo
 from flask_wtf import FlaskForm, csrf
 from pymongo import MongoClient
-from pyzbar.pyzbar import decode
-from waitress import serve
-from wtforms import StringField
 mode='cloud'
 
 if mode=='local':
