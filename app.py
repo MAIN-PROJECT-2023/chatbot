@@ -3,12 +3,22 @@ import random
 import json
 import pickle
 import numpy as np
+
+
 import nltk
 from nltk.stem import WordNetLemmatizer
 from tensorflow.keras.models import load_model
+
+
+
 from flask_pymongo import PyMongo
 from flask_wtf import FlaskForm, csrf
 from pymongo import MongoClient
+import google.generativeai as genai
+
+
+
+
 mode='cloud'
 
 if mode=='local':
@@ -27,8 +37,6 @@ else:
     # Connect to MongoDB
     client = MongoClient("mongodb+srv://shiban:hqwaSJns8vkQVVtk@cluster0.6dhrc7h.mongodb.net/test") 
     db = client['chatbot']
-
-
 
 
 lemmatizer = WordNetLemmatizer()
@@ -74,7 +82,7 @@ def get_response(intents_list, intents_json):
             break
     return result
 
-print("GO! Bot is running!")
+print("GO! Bot is running!") 
 
 app = Flask(__name__)
 app.secret_key = 'your_secret_key'
@@ -132,10 +140,22 @@ def logincred():
         user = db.chatbotuser.find_one({'email': email, 'password': password})
 
         if user:
-            # Store user ID in session
-            session['user'] = {'name': user['name'], 'email': email}
+            # Extract the first name from the 'name' field
+            full_name = user.get('name', '')
+            if full_name and len(full_name.split()[0]) == 1:
+                # If the first name is an initial, get the second name
+                second_name = ' '.join(full_name.split()[1:])
+                first_name = second_name if second_name else ''
+            else:
+                # If the first name is not an initial, get the first name
+                first_name = full_name.split()[0] if full_name else ''
+
+            # Store user ID and first name in session
+            session['user'] = {'name': first_name, 'email': email}
             flash('Login successful', 'success')
-            return redirect(url_for('chatbotpage', username=user['name']))
+
+            # Redirect to chatbotpage with the username in the URL
+            return redirect(url_for('chatbotpage', username=first_name))
         else:
             flash('Invalid email or password', 'error')
             return redirect(url_for('loginregpage'))
@@ -156,12 +176,16 @@ def chatbotpage():
         return redirect(url_for('loginregpage'))
 
 
+
+
+
 @app.route('/ask', methods=['POST'])
 def ask():
     user_message = request.form['user_message']
     ints = predict_class(user_message)
     res = get_response(ints, intents)
     return jsonify({'bot_response': res, 'user_message': user_message})
+
 
 
 if __name__ == '__main__':

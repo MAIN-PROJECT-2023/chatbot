@@ -10,7 +10,9 @@ document.addEventListener('DOMContentLoaded', function () {
 
     document.querySelector('.profile-icon').addEventListener('click', function (event) {
         event.stopPropagation(); // Prevents the click event from reaching the parent div
+        console.log('Clicked profile icon!');
         toggleProfileDropdown();
+        toggleAvatars(); // Add this line to toggle avatars when clicking the profile icon
     });
 
     document.querySelector('.profile-dropdown').addEventListener('click', function (event) {
@@ -20,6 +22,7 @@ document.addEventListener('DOMContentLoaded', function () {
     document.querySelector('.profile-dropdown a').addEventListener('click', function () {
         hideProfileDropdown();
     });
+   
 });
 
 function toggleSlideMenu() {
@@ -39,6 +42,38 @@ function hideProfileDropdown() {
     var dropdown = document.querySelector('.profile-dropdown');
     dropdown.style.display = 'none';
 }
+
+function toggleAvatars() {
+    const userAvatarContainer = document.getElementById('user-avatar-container');
+    const advisorAvatarContainer = document.getElementById('advisor-avatar-container');
+
+    // Check if avatars are already inserted, and remove them if they are
+    const userAvatar = document.querySelector('.user-avatar');
+    const advisorAvatar = document.querySelector('.advisor-avatar');
+
+    if (userAvatar) {
+        userAvatar.remove();
+    }
+    if (advisorAvatar) {
+        advisorAvatar.remove();
+    }
+
+    // Create new avatar elements
+    const userAvatarElement = document.createElement('img');
+    userAvatarElement.classList.add('avatar', 'user-avatar');
+    userAvatarElement.src = userAvatarContainer.querySelector('.avatar').src;
+
+    const advisorAvatarElement = document.createElement('img');
+    advisorAvatarElement.classList.add('avatar', 'advisor-avatar');
+    advisorAvatarElement.src = advisorAvatarContainer.querySelector('.avatar').src;
+
+    // Append avatars to the chat box
+    const chatBox = document.getElementById('chat-box');
+    chatBox.appendChild(userAvatarElement);
+    chatBox.appendChild(advisorAvatarElement);
+}
+
+
 
 function sendMessage() {
     var userMessage = document.getElementById("user-input").value;
@@ -61,11 +96,11 @@ function sendMessage() {
     .then(data => {
         var botResponse = data.bot_response;
         appendMessage("Advisor: " + botResponse, 'bot');
+        toggleAvatars(); // Move the toggleAvatars call here
     })
     .catch(error => {
         console.error('Error during fetch:', error);
     });
-    
 
     // Clear the user input field
     document.getElementById("user-input").value = "";
@@ -92,3 +127,4 @@ function appendMessage(message, sender) {
     // Scroll to the bottom of the chat box
     chatBox.scrollTop = chatBox.scrollHeight;
 }
+
